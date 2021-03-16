@@ -1,0 +1,38 @@
+spring:
+  data:
+    mongodb:
+      authentication-database: admin
+      username: root
+      password: root
+      database: gbgs
+      port: 27017
+      host: localhost
+  application:
+    name: GBGS-Gateway-service
+  mvc:
+    dispatch-options-request: true
+
+server:
+  port: 8091
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8090/eureka/
+
+ribbon:
+  eureka:
+    enabled: false
+
+zuul:
+  host:
+    socket-timeout-millis: 30000
+  ignored-headers: Access-Control-Allow-Credentials, Access-Control-Allow-Origin, Access-Control-Allow-Headers, Access-Control-Expose-Headers, Access-Control-Allow-Methods
+  ignore-security-headers: true
+  routes:
+    GBGS-Profile-service:
+      path: /profile/v0/**
+      serviceId: GBGS-Profile-service
+    GBGS-Order-service:
+      path: /order/v0/**
+      serviceId: GBGS-Order-service

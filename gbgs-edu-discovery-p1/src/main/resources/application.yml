@@ -1,0 +1,26 @@
+spring:
+  application:
+    name: GBGS-Discovery-service
+  boot:
+    admin:
+      context-path: /admin
+      
+server:
+  port: 8761
+  tomcat:
+    uri-encoding: utf-8
+eureka:
+  client:
+    service-url:
+      defaultZone : http://${security.user.name}:${security.user.password}@peer2:8762/eureka/
+  instance:
+    prefer-ip-address: false
+    instance-id: ${spring.application.name}:${spring.cloud.client.ipAddress}:${server.port}
+    hostname: peer1
+
+security:
+  basic:
+    enabled: true
+  user:
+    name: root
+    password: admin

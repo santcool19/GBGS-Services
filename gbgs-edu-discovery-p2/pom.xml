@@ -4,11 +4,11 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.gbgs.edu</groupId>
-    <artifactId>gbgs-edu-discovery</artifactId>
+    <artifactId>gbgs-edu-discovery-p2</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <packaging>jar</packaging>
 
-    <name>gbgs-edu-discovery</name>
+    <name>gbgs-edu-discovery-p2</name>
     <description>gbgs-edu-discovery</description>
 
     <parent>

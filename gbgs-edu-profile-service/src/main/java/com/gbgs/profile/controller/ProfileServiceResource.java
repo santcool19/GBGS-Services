@@ -10,14 +10,14 @@ import javax.validation.Valid;
 /**
  * Author: santosh.kumar
  * Date: 1st NOV 2020
- * Comment: UtilityServiceResource is a controller class which is used to receive and response user request
+ * Comment:
  */
 @RestController
 @RequestMapping("profile/v0/")
 public class ProfileServiceResource {
 
     @GetMapping("/{userId}")
-    public String getCart(@Valid @PathVariable long userId) {
+    public String getProfile(@Valid @PathVariable long userId) {
         return String.valueOf(userId);
     }
 }

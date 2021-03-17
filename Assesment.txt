@@ -1,0 +1,55 @@
+Target:
+Language:  Java 8, Scala, Data Structure
+Framework: Spring(Core,JDBC,Boot,MicroService,Eureka, Zuul)
+Desig:     Pattern/Principal/Tool
+DB:        TeraData, BigData(Core,Hive,Spark,Mongo)
+MQ:        Kafka
+Certification: AWS, BIgData
+Note*: Start freelancing 
+
+Today's action:
+1. Look into Zuul and spring cloud.
+2. Look into Java programming, Thread, Uncought exception.
+3. Interview Q.
+
+Tomorrow's action:
+1. Spark, Spark Interview Q: 17th March, Wednesday
+2. 
+
+Attended Interview:
+
+
+Interview Q:
+Wells Fargo:
+. Whow to keep 5 hread in sync ?
+. How to always load a specefic proprty using spring boot.
+. Why to use spring DI ? why not other's DI ?
+. How Tree set implemented ?
+. How to write huge data in CSV file ?
+. What is your project ?
+. How to cache data in Memory using @Cacheable?
+. Sort List of Employee by Name followed by Salary
+. How Transaction management is happening in Spring ?
+. Why to use Spring boot ?
+. How to sort String like dictionary ?
+
+Open Q:
+. Transaction Management using spring ?
+. How to find delta in big CSV file ?
+. How to read/save huge amount of data in DB ?
+. How to send batch data on Kafka ?
+. How to send List of java object in Kafka ?
+. Normalization in DB ?
+. What is use of JobHistoryServer in Hadoop ?
+. What is Distributed Cache in Hadoop ?
+. How you make sure scling of msg listener ? Needed to receive huge message and persist same message in DB.
+. How to get hpw many message consumed by Kafka consumer ?
+. How to know, leaders and follower partition are in synch or not ?
+. Write java program for Kafka acknowledgement .
+. How to offset sent from consumer to zookeeper.
+
+https://java2blog.com/java-coding-interview-questions/
+https://www.java67.com/2020/02/top-40-binary-tree-interview-questions.html
+
+
+

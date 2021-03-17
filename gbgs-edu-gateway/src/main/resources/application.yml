@@ -22,17 +22,19 @@ eureka:
 
 ribbon:
   eureka:
-    enabled: false
+    enabled: true
 
 zuul:
   host:
-    socket-timeout-millis: 30000
+    socket-timeout-millis: 300000
   ignored-headers: Access-Control-Allow-Credentials, Access-Control-Allow-Origin, Access-Control-Allow-Headers, Access-Control-Expose-Headers, Access-Control-Allow-Methods
   ignore-security-headers: true
   routes:
-    GBGS-Profile-service:
+    Profile-service:
       path: /profile/v0/**
-      serviceId: GBGS-Profile-service
-    GBGS-Order-service:
+      serviceId: GBGS-PROFILE-SERVICE
+      stripPrefix: false
+    Order-service:
       path: /order/v0/**
-      serviceId: GBGS-Order-service
+      serviceId: GBGS-ORDER-SERVICE
+      stripPrefix: false

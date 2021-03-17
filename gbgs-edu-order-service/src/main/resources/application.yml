@@ -1,0 +1,27 @@
+server:
+  port: ${PORT:0}    #port number
+
+eureka:
+  instance:
+    instance-id: ${spring.application.name}:${spring.application.instance_id:${random.value}}
+    leaseRenewalIntervalInSeconds: 5
+    leaseExpirationDurationInSeconds: 2
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8090/eureka/
+    healthcheck:
+      enabled: true
+    lease:
+      duration: 5
+
+spring:
+  application:
+    name: GBGS-Order-service
+
+management:
+  security:
+    enabled: false
+
+logging:
+  level:
+    com.gbgs.utility: DEBUG

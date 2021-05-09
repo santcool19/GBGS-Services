@@ -3,7 +3,9 @@ package com.gbgs.edu.application.programm.ds;
 import com.gbgs.edu.application.model.Student;
 
 import java.util.*;
+import java.util.concurrent.locks.ReentrantLock;
 import java.util.function.Function;
+import java.util.function.Predicate;
 import java.util.stream.Collectors;
 
 public class Java8 {
@@ -15,7 +17,6 @@ public class Java8 {
         intArr[3] = 4;
         intArr[4] = 8;
         List<String> abc = new ArrayList<>();
-        
         List<Student> studentList = new ArrayList<>();
         studentList.add(new Student(372, "Venkat", 1));
         studentList.add(new Student(2, "Sachin", 4));
@@ -23,7 +24,7 @@ public class Java8 {
         studentList.add(new Student(72, "Karthik", 2));
         Map result1 = sortListFunction("Test").andThen(getMapFunction("Test")).apply(studentList);
         Map<Integer, Long> occuranceMap = Arrays.stream(intArr).boxed().collect(Collectors.groupingBy(Function.identity(), Collectors.counting()));
-        LinkedHashMap<Integer, Long> sorted = occuranceMap.entrySet().stream().sorted(Map.Entry.comparingByValue()).collect(Collectors.toMap(e -> e.getKey(), e -> e.getValue(), (e1, e2) -> e1, LinkedHashMap::new));
+        Map<Integer, Long> sorted = occuranceMap.entrySet().stream().sorted(Map.Entry.comparingByValue()).collect(Collectors.toMap(e -> e.getKey(), e -> e.getValue(), (e1, e2) -> e1));
         System.out.println("Result 1 : " + sorted);
         studentList.stream().collect(Collectors.groupingBy(Student::getId));
     }

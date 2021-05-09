@@ -2,14 +2,12 @@ package com.gbgs.edu.application.programm.ds;
 
 import com.gbgs.edu.application.model.Student;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
+import java.util.*;
 
 
 public class GenericBasic {
     public static void main(String args[]) {
-        removeDuplicateElement();
+        reverseCollection();
     }
 
     private static String longestPalindrome(String s) {
@@ -123,7 +121,8 @@ public class GenericBasic {
         studlist.add(student2);
         studlist.add(student3);
         studlist.add(student4);
-        studlist.sort((Student s1, Student s2) -> s2.getId() - s1.getId());
+        studlist.sort(Comparator.comparing(Student::getId).thenComparing(Comparator.comparing(Student::getRank)));
+        //studlist.sort((Student s1, Student s2) -> s2.getId() - s1.getId());
         studlist.forEach(s -> System.out.println(s));
     }
 

@@ -44,6 +44,7 @@ public class KafkaConsumerConfig {
     public ConcurrentKafkaListenerContainerFactory kafkaListenerContainerFactory() {
         ConcurrentKafkaListenerContainerFactory factory = new ConcurrentKafkaListenerContainerFactory<>();
         factory.setConsumerFactory(consumerFactory());
+        //factory.setErrorHandler(new SeekToCurrentErrorHandler(new DeadLetterPublishingRecoverer("")));
         return factory;
     }
 
